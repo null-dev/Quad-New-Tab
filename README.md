@@ -1,17 +1,20 @@
 Custom New Tab Page
 ===================
-So one day I decided to make a new tab page to use in my Firefox browser.
+This is a fork of [Quad's New Tab page](https://github.com/QuadPiece/Quad-New-Tab).
 
 Here's the files because why not right?
 
-![Preview screenshot](http://file.quad.moe/file/10E4A5.png)
+![Preview screenshot](https://raw.githubusercontent.com/null-dev/Quad-New-Tab/master/desu.jpg)
 
 # Features:
+* Transition from original design (hard to explain)
 * Kawaii anime grill image
+* Swag background image
 * (Kind of) Responsive design
 * Lots of stupidly labeled links
 * ~~Easy~~ Possible to edit with your own links
-* Now with far less spaghetti code! (Thanks Avail)
+* More spaghetti code!
+* Better font!
 * Googel search
 * Customizable two color (material inspired) design
 
@@ -21,3 +24,7 @@ Here's the files because why not right?
 * Set the value to the local path of the index.html file
 * Open a new tab and be happy!
 ![help screenshot](http://a.pomf.se/zgiakz.png)
+
+# Installation (in Chrome):
+* Use this: [New Tab Redirect Thingy](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
+* Too lazy to explain how to do this, figure it out yourself...

@@ -3,6 +3,25 @@ html {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
+    animation-name: bckfade;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bckfade {
+    from {background-color: #fafafa;}
+    to {background-color: #393F3F;}
+}
+
+@keyframes btnbckfade {
+    from {background-color: #fafafa;}
+    to {background-color: #393F3F;}
+}
+
+@keyframes textfade {
+    from {color: #111;}
+    to {color: #fafafa;}
 }
 
 .top {
@@ -11,6 +30,9 @@ html {
     font-size: 52px;
     color: #111;
     margin: 0 auto;
+    animation-name: textfade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 #block {
@@ -22,10 +44,32 @@ html {
     bottom: 0px;
     right: -50px;
     z-index: -1;
+    opacity: 1;
+    transition: opacity 1s; 
+}
+
+#bottomimg.fade {
+	opacity: 0;
+}
+
+#bckimg {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('bck.jpg');
+    background-position: center; 
+    opacity: 0;
+    transition: opacity 1s; 
+}
+
+#bckimg.fade {
+	opacity: 1;
 }
 
 .button {
-    padding-top: 6px;
     margin-right: 3px;
     display: inline-block;
     background-color: #fafafa;
@@ -34,11 +78,12 @@ html {
         min-width: 160px;
     height: 120px;
     margin-top: 5px;
-    transition: background-color 0.2s, box-shadow 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
-.button:hover {
-    color: #111;
+.txt:hover {
+    box-shadow: 0px 0px 5px #111;
 }
 
 .blue {
@@ -66,6 +111,7 @@ html {
     height: 100%;
     font-family: 'Tahoma';
     text-align: center;
+    transition: background-color 0.2s, box-shadow 0.5s;
 }
 
 .btntxt {
@@ -73,6 +119,8 @@ html {
     vertical-align: middle;
     margin-bottom: 2px;
     margin: 0;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .links {
@@ -86,7 +134,7 @@ html {
 }
 
 .googlebox {
-    width: 170px;
+    width: 200px;
     padding: 15px;
     display: block;
         margin-left: auto;

@@ -1,138 +1,155 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Ore wa neko desu!~</title>
     <link rel="stylesheet" href="sexay.css">
+    <script>
+	
+	//Change this to 'true' to not use the new background image
+	var darkOnly = false;
+	//Change this to 'true' to not fade out kon.jpg
+	var doNotFadeKon = false;
+	//Change this to 'true' to use Tahoma font instead of the Ubuntu font
+	var tahomaFont = false;
+	
+	function fadeKon() {
+		document.getElementById("bottomimg").classList.toggle('fade');
+	}
+	function fadeBck() {
+		document.getElementById("bckimg").classList.toggle('fade');
+	}
+	function updateNyaaFont() {
+		var top = document.getElementsByClassName("top")[0];
+		top.style.fontFamily = "Ubuntu";
+	}
+    function onLoad() {
+	  if(!tahomaFont) {
+	    setTimeout(updateNyaaFont, 1500);
+	  }
+      x = document.getElementsByClassName("button");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.animationDelay = ((1+(i/10)) + "s");
+        x[i].style.animationName = "btnbckfade";
+      }
+      y = document.getElementsByClassName("btntxt");
+      var last;
+      for (i = 0; i < y.length; i++) {
+		last = 1 + (i/10);
+        y[i].style.animationDelay = last + "s";
+        y[i].style.animationName = "textfade";
+      }
+      if(!doNotFadeKon) {
+        setTimeout(fadeKon, (last + 0.5) * 1000);
+      }
+      if(!darkOnly) {
+        setTimeout(fadeBck, (last + 0.5) * 1000);
+      }
+    }
+    </script>
 </head>
-<body>
+<body onload="onLoad()">
     <div id="block">
         <h2 class="top">Nyaa~</h2>
         <div class="searcharea">
             <form method="get" action="http://www.google.com/search">
-                <input type="text" class="googlebox" name="q" placeholder="Google desu!"/>
+                <input type="text" class="googlebox" name="q" placeholder="Google desu!" autofocus/>
             </form>
         </div>
         <div class="links">
-            <a href="http://artscow.com/">
-                <div class="button blue" title="Artscow">
-                    <div class="txt">
-                        <p class="btntxt">Artscow</p>
-                    </div>
-                </div>
-            </a>
             <a href="http://youtube.com/">
-                <div class="button red" title="YouTube">
-                    <div class="txt">
-                        <p class="btntxt">YT</p>
+                <div class="button" title="YouTube">
+                    <div class="txt red">
+                        <p class="btntxt">UTube</p>
                     </div>
                 </div>
             </a>
-            <a href="http://digitalocean.com/">
-                <div class="button blue" title="DigitalOcean">
-                    <div class="txt">
-                        <p class="btntxt">DO</p>
+            <a href="http://8ch.net/a/">
+                <div class="button" title="/a/">
+                    <div class="txt blue">
+                        <p class="btntxt">/a/</p>
                     </div>
                 </div>
             </a>
-            <a href="http://dx.com/">
-                <div class="button red" title="Dealextreme">
-                    <div class="txt">
-                        <p class="btntxt">DX</p>
-                    </div>
-                </div>
-            </a>
-            <a href="http://4chan.org/g/">
-                <div class="button blue" title="/g/">
-                    <div class="txt">
-                        <p class="btntxt">/g/</p>
-                    </div>
-                </div>
-            </a>
-            <a href="http://mail.zoho.com/">
-                <div class="button red" title="Main mail">
-                    <div class="txt">
-                        <p class="btntxt">Mail</p>
+            <a href="http://smuglo.li/">
+                <div class="button" title="SmLo">
+                    <div class="txt red">
+                        <p class="btntxt">SmLo</p>
                     </div>
                 </div>
             </a>
             <a href="http://gmail.com/">
-                <div class="button blue" title="Gmail">
-                    <div class="txt">
+                <div class="button" title="Gmail">
+                    <div class="txt blue">
                         <p class="btntxt">Gmail</p>
                     </div>
                 </div>
             </a>
-            <a href="http://sunrise.am/">
-                <div class="button red" title="Calendar">
-                    <div class="txt">
-                        <p class="btntxt">Cal</p>
-                    </div>
-                </div>
-            </a>
-            <a href="http://facebook.com/QuaddyPiece/">
-                <div class="button blue" title="Facebook">
-                    <div class="txt">
-                        <p class="btntxt">FB</p>
-                    </div>
-                </div>
-            </a>
             <a href="http://crunchyroll.com/">
-                <div class="button red" title="Crunchyroll">
-                    <div class="txt">
+                <div class="button" title="Crunchyroll">
+                    <div class="txt red">
                         <p class="btntxt">CR</p>
                     </div>
                 </div>
             </a>
-            <a href="http://last.fm/user/quadpiece/">
-                <div class="button blue" title="last.fm">
-                    <div class="txt">
-                        <p class="btntxt">last.fm</p>
+            <a href="http://kissanime.com/m">
+                <div class="button" title="KissAnime">
+                    <div class="txt blue">
+                        <p class="btntxt">KA</p>
                     </div>
                 </div>
             </a>
-            <a href="http://tweetdeck.twitter.com/">
-                <div class="button red" title="TweetDeck">
-                    <div class="txt">
-                        <p class="btntxt">TwDe</p>
+            <a href="http://twitter.com/">
+                <div class="button" title="Twitter">
+                    <div class="txt red">
+                        <p class="btntxt">tweet</p>
                     </div>
                 </div>
             </a>
-            <a href="http://osu.ppy.sh/u/QuadPiece">
-                <div class="button blue" title="osu!profile">
-                    <div class="txt">
+            <a href="http://osu.ppy.sh/">
+                <div class="button" title="osu!">
+                    <div class="txt blue">
                         <p class="btntxt">osu!</p>
                     </div>
                 </div>
             </a>
-            <a href="http://www.vultr.com/">
-                <div class="button red" title="Vultr">
-                    <div class="txt">
-                        <p class="btntxt">Vultr</p>
+            <a href="http://www.bakabt.me">
+                <div class="button" title="BakaBT">
+                    <div class="txt red">
+                        <p class="btntxt">BBT</p>
                     </div>
                 </div>
             </a>
-            <a href="http://retrospring.net/">
-                <div class="button blue" title="Retrospring">
-                    <div class="txt">
-                        <p class="btntxt">RS</p>
-                    </div>
-                </div>
-            </a>
-            <a href="http://dev.twoffein.com/">
-                <div class="button red" title="Twoffein">
-                    <div class="txt">
-                        <p class="btntxt">TwEin</p>
-                    </div>
-                </div>
-            </a>
-            <a href="http://github.com/QuadPiece">
-                <div class="button blue" title="GitHub">
-                    <div class="txt">
+            <a href="http://github.com/null-dev">
+                <div class="button" title="GitHub">
+                    <div class="txt blue">
                         <p class="btntxt">Git</p>
                     </div>
                 </div>
             </a>
+            <a href="https://animebytes.tv/">
+                <div class="button" title="AnimeBytes">
+                    <div class="txt red">
+                        <p class="btntxt">AnBy</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://manager.linode.com/longview">
+                <div class="button" title="Linode Longview">
+                    <div class="txt blue">
+                        <p class="btntxt">LiLo</p>
+                    </div>
+                </div>
+            </a>
+            <a href="http://openings.moe/">
+                <div class="button" title="Openings.moe">
+                    <div class="txt red">
+                        <p class="btntxt">OPM</p>
+                    </div>
+                </div>
+            </a>
         </div>
-        <img src="kon.png" id="bottomimg">
+        <div id="bckimg"></div>
+        <img src="kon.png" id="bottomimg" alt="kon.jpg"/>
     </div>
 </body>
 </html>
